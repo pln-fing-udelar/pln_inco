@@ -4,19 +4,16 @@ from subprocess import Popen, PIPE
 """
 Operaciones para trabajar con graphviz
 """
-	
-def gen_jpeg_output(entrada):
-	"""
-	A partir de una entrada correspondiente a una especificación de graphviz devuelve el .jpeg correspondiente, llamando a graphviz
-	"""
-	p=Popen(['dot','-Tjpg'], stdin=PIPE, stdout=PIPE)
-	return p.communicate(input=entrada)[0]
-		
 
-def gen_svg_output(entrada):
+def generate(entrada,format):
+	""" Given a graphviz specification, returns the dot generated file, in the specifyied format
+	Format can be one of: 'svg', 'png'
 	"""
-	A partir de una entrada correspondiente a una especificación de graphviz devuelve el .svg correspondiente, llamando a graphviz
-	"""
-	p=Popen(['dot','-Tsvg'], stdin=PIPE, stdout=PIPE)
-	return p.communicate(input=entrada)[0]
+	
+	if format=='svg':
+		opt='-Tjpg'
+	elif format=='png':
+		opt='-Tpng'
 		
+	p=Popen(['dot',opt], stdin=PIPE, stdout=PIPE)
+	return p.communicate(input=entrada)[0]
