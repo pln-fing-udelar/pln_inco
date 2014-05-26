@@ -19,8 +19,9 @@ def tree_to_dot(t):
 		Print the tree for a defined node. Nodes are specified in-order in the original tree	
 		"""
 
+		
 		# Print the start node of the tree
-		s='%s [label="%s"]' % (start_node,t.node)
+		s ='%s [label="%s"]' % (start_node,t.node)
 		pos=start_node+1
 
 		# Print the node's children
@@ -37,8 +38,40 @@ def tree_to_dot(t):
 		return (s,pos-1)
 
 	# Print the digraph dot specification
-	s="digraph G{\n"	
+	s='digraph G{\n'	
+	s+='edge [dir=none]\n'
+	s+='node [shape=plaintext]\n'
+	
 	s+=gv_print(t)[0]
 	s+="\n}"
 
 	return s
+
+
+def dependency_to_dot(t):
+	"""
+	Given a NLTK representation for a dependency analysis (such as the one in the CoNLL 2007 corpus, returns a dot representation
+	suitable for using with Graphviz
+	@type t:L{nltk.parse.dependencygraph.DependencyGraph}
+	@rtype C{String}
+	"""
+
+	# Start the digraph specification	
+	s='digraph G{\n'
+	s+='edge [dir=forward]\n'
+	s+='node [shape=plaintext]\n'
+
+	# Draw the remaining nodes
+	for node in t.nodelist[1:]:
+		s+='\n%s [label="%s (%s)"]' %  (node['address'],node['address'],node['word'])
+		if node['head']:
+			if node['rel'] != '_':
+				s+= '\n%s -> %s [label="%s"]' % (node['address'],node['head'],node['rel'])
+			else:
+				s+= '\n%s -> %s ' % (node['address'],node['head'])
+
+        s+="\n}"
+
+	return s
+
+
