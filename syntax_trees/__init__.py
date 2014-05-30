@@ -67,9 +67,9 @@ def dependency_to_dot(t):
 		s+='\n%s [label="%s (%s)"]' %  (node['address'],node['address'],node['word'])
 		if node['head']:
 			if node['rel'] != '_':
-				s+= '\n%s -> %s [label="%s"]' % (node['address'],node['head'],node['rel'])
+				s+= '\n%s -> %s [label="%s"]' % (node['head'],node['address'],node['rel'])
 			else:
-				s+= '\n%s -> %s ' % (node['address'],node['head'])
+				s+= '\n%s -> %s ' % (node['head'],node['address'])
 
         s+="\n}"
 
