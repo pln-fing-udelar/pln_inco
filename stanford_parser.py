@@ -4,23 +4,42 @@ import shlex
 import codecs
 import tempfile
 """
-Operaciones para trabajar con el parser de Stanford
+Working with the Stanford Parser. Every function here assumes you have installed the Stanford Parser and set the CLASSPATH to:
+export STANFORD_PARSER=$HOME/bin/stanford-parser-full-2014-01-04
+export CLASSPATH=$STANFORD_PARSER/stanford-parser.jar:$STANFORD_PARSER/stanford-parser-3.3.1-models.jar
+
+TODO: utf-8!
 """
 	
-def parse(fileName, grammar_file):
+def lexicalized_parser_parse(sentences,model='englishPCFG'):
 	""" 
-	Dada una lista de oraciones, las parsea con el Stanford Parser. Asume que la variable CLASSPATH ya tiene seteado el stanford-parser.bat. 
-	@arg grammar_file: contiene el archivo de la gramática para parsear
-	@arg fileName: archivo texto a procesar
+	Given a list of sentences, parse them with the Lexicalized Stanford Parser, and return the results.
+	Uses the englishPCFG.ser.gz
+	
+	@arg sentences: List of C{String} containing the sentences  
+	@model: model to use. For the moment, the only valid value is 'englishPCFG' 
 	"""
-	#command_line='java -mx500m edu.stanford.nlp.parser.lexparser.LexicalizedParser -tokenized -tokenizerOptions "normalizeCurrency=false" -tagSeparator / -outputFormat "penn" englishPCFG.ser.gz -'
-	command_line='java -mx1000m edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -tokenized -escaper edu.stanford.nlp.process.PTBEscapingProcessor -tagSeparator / -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz -'
+
+	# Build a text for parsing. Just one sentence for each line
+	text='\n'.join(sentences)
+	
+	if model=='englishPCFG':
+		model_file='edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz'
+
+	command_line='java -mx1000m edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -tokenized -escaper edu.stanford.nlp.process.PTBEscapingProcessor -tagSeparator / -outputFormat "penn" - -'
 	args=shlex.split(command_line)
-	
-	#Sustituyo por el grammar file 
-	#args[-2]=grammar_file
-	args[-1]=fileName
-	
+
+	# Create a temporary file for storing the text
+	source=tempfile.NamedTemporaryFile(delete=False)
+	source.write(text)
+	source.close()
+	args[-1]=source.name
+
+	# Incorporate the model file
+	args[-2]=model_file
+
+
+	# Create a temporary file for the results	
 	target=tempfile.NamedTemporaryFile(delete=False)
 	target_name=target.name
 	p=subprocess.Popen(args,stdout=target)
@@ -29,8 +48,9 @@ def parse(fileName, grammar_file):
 	target=open(target_name,'r')
 	result=target.read()
 	target.close()
-	return result
-	
-	
-	
 
+	return result.split('\n\n')[:-1]
+	
+if __name__ == '__main__':
+	parsed=lexicalized_parser_parse(['This is a demo text!','And this is another sentence', 'This an utf-8 encoded: cámara'])
+	print parsed[0]
