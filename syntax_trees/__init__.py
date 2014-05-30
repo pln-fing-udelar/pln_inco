@@ -1,7 +1,8 @@
 """
-Module for working with  NLTK syntax trees
+Module for working with  NLTK syntax trees...
 """
 import nltk.tree
+
 
 def tree_to_dot(t):
 	"""
