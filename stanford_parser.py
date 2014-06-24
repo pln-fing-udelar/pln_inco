@@ -7,8 +7,6 @@ import tempfile
 Working with the Stanford Parser. Every function here assumes you have installed the Stanford Parser and set the CLASSPATH to:
 export STANFORD_PARSER=$HOME/bin/stanford-parser-full-2014-01-04
 export CLASSPATH=$STANFORD_PARSER/stanford-parser.jar:$STANFORD_PARSER/stanford-parser-3.3.1-models.jar
-
-TODO: utf-8!
 """
 	
 def lexicalized_parser_parse(sentences,model='englishPCFG',output='penn'):
@@ -18,7 +16,7 @@ def lexicalized_parser_parse(sentences,model='englishPCFG',output='penn'):
 	
 	@arg sentences: List of C{String} containing the sentences  
 	@model: model to use. For the moment, the only valid value is 'englishPCFG' 
-	@output: type of output for the Stanford Parser. Valid values: penn (default), dependencies
+	@output: type of output for the Stanford Parser. Valid values: penn (default), basicDependencies
 	"""
 
 	# Build a text for parsing. Just one sentence for each line
@@ -26,10 +24,11 @@ def lexicalized_parser_parse(sentences,model='englishPCFG',output='penn'):
 	
 
 #	command_line='java -mx1000m edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -tokenized -escaper edu.stanford.nlp.process.PTBEscapingProcessor -tagSeparator / -outputFormat -  - -'
-	command_line='java -mx1000m edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -escaper edu.stanford.nlp.process.PTBEscapingProcessor -tagSeparator / -outputFormat -  - -'
+	command_line='java -mx1000m edu.stanford.nlp.parser.lexparser.LexicalizedParser -sentences newline -escaper edu.stanford.nlp.process.PTBEscapingProcessor -tagSeparator / -outputFormat - -outputFormatOptions - modelFile -'
 	args=shlex.split(command_line)
 
 	# Create a temporary file for storing the text. Pass it to the command line as an argument
+	# Last argument
 	source=tempfile.NamedTemporaryFile(delete=False)
 	source.write(text)
 	source.close()
@@ -41,8 +40,16 @@ def lexicalized_parser_parse(sentences,model='englishPCFG',output='penn'):
 	args[-2]=model_file
 
 	# Incorporate  the output format
-	args[-3]=output
-
+	if output=='penn':
+		# No outputFormatOptions
+		del args[-3]
+		del args[-3]
+		# Specify outputFormat	
+		args[-3]='penn'
+	elif output=='basicDependencies':
+		# Specify outputFormat and outputFormatOptions
+		args[-3]='basicDependencies'
+		args[-5]='typedDependencies'
 
 
 	# Create a temporary file for the results	
