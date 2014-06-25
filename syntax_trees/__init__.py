@@ -75,4 +75,28 @@ def dependency_to_dot(t):
 
 	return s
 
+def stanford_dependency_to_malt_tab(stanford_basic_dep,words_and_pos):
+	"""
+	Given a list of dependendencies, output from the Stanford parser, using basicDependencies, and a list of (word,POS) pairs
+	Returns a Malt-TAB compliant specification, suitable to be read using nltk.dependencygraph.DependencyGraph
+	@rtype C{String}
+	@type stanford_basic_dep:C{string}
+	@type words_and_pos:C{List}
+	"""
+	import re
+	malt_tab_rep=''
+	words=[word for (word,pos) in words_and_pos]
+	pos=[pos for (word,pos) in words_and_pos]
 
+	rels=stanford_basic_dep.split('\n')
+    	xs=[re.match(r'(\w+)\((\w+)-(\d+), (\w+)-(\w+).*',r).groups() for r in rels] 
+    	ys= sorted(xs,key=lambda elem:int(elem[4]))
+    	i=0
+    	for y in ys:
+        	i+=1
+        	while i<int(y[4]):
+            		# Fix a missing word
+		        malt_tab_rep+="{}\t{}\t{}\t{}\n".format(words[i-1],pos[i-1],None,None)    
+		        i+=1
+        	malt_tab_rep+="{}\t{}\t{}\t{}\n".format(words[i-1],pos[i-1],y[2],y[0])
+	return malt_tab_rep
