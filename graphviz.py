@@ -2,15 +2,15 @@
 from subprocess import Popen, PIPE
 
 """
-Operaciones para trabajar con graphviz
+A module for generating graphviz images
 """
 
 def generate(entrada,format):
 	""" Given a graphviz specification, returns the dot generated file, in the specifyied format
-	Format can be one of: 'svg', 'png'
+	Format can be one of: 'jpg', 'png'
 	"""
 	
-	if format=='svg':
+	if format=='jpg':
 		opt='-Tjpg'
 	elif format=='png':
 		opt='-Tpng'
