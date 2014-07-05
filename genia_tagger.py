@@ -4,22 +4,21 @@ import shlex
 import codecs
 import os
 """
-Operaciones para trabajar con el tagger GENIA
+Module for using the GENIA tagger
 """
 	
 def tag(fileName, geniaHome):
 	""" 
-	Dado un archivo, lo procesa con el tagger de Genia y devuelve el resultado
-	@arg fileName: archivo texto a procesar
-	@arg geniaHome: directorio donde está instalado el tagger de Genia  (se necesita porque GENIA solamente funciona si el archivo a taggear
-	está en su directorio)
+	Given a file, process it with the GENIA tagger and return its result
+	@arg fileName: file with the text to process
+	@arg geniaHome: GENIA Home. We need it because GENIA only works when the file is in its own directory (!)
 	"""
 
-	# Como el tagger de GENIA solo funciona corriendo desde el directorio, me cambio ahí antes de ejecutarlo
+	# change to the GENIA home
 	present_dir=os.getcwd()
-	print geniaHome
 	os.chdir(geniaHome)
 	p=subprocess.Popen(['./geniatagger',fileName], stdout=subprocess.PIPE)
 	result= p.communicate()[0]
+	# back to the directory we started
 	os.chdir(present_dir)
 	return result
