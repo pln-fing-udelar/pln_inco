@@ -13,7 +13,6 @@ export CLASSPATH=$STANFORD_PARSER/stanford-parser.jar:$STANFORD_PARSER/stanford-
 def lexicalized_parser_parse(sentences,model='englishPCFG',output='penn'):
 	""" 
 	Given a list of sentences, it parses them with the Lexicalized Stanford Parser, and return the results.  
-	Uses the englishPCFG.ser.gz
 	
 	@arg sentences: List of C{String} containing the sentences  
 	@arg model: model to use. For the moment, the only valid value is 'englishPCFG' 
@@ -57,10 +56,9 @@ def lexicalized_parser_tag(sentences,model='englishPCFG'):
 	""" 
 	Given a list of sentences, parse them with the Lexicalized Stanford Parser, and return their pos_tags.
 	I guess I should better use the Stanford Tagger for performance decisions, but this is pretty direct
-	Uses the englishPCFG.ser.gz
 	
 	@arg sentences: List of C{String} containing the sentences  
-	@model: model to use. For the moment, the only valid value is 'englishPCFG' 
+	@arg model: model to use. For the moment, the only valid value is 'englishPCFG' 
 	"""
 
 	# Build a text for parsing. Just one sentence for each line
