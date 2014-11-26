@@ -5,6 +5,7 @@ import codecs
 import os
 """
 Module for using the GENIA tagger
+Part of the pln-inco package
 """
 	
 def tag(fileName, geniaHome):

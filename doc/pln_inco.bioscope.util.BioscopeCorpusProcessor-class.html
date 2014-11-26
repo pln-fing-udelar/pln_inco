@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pln_inco.bioscope.util.BioscopeCorpusProcessor</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pln_inco-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="pln_inco-module.html">Package&nbsp;pln_inco</a> ::
+        <a href="pln_inco.bioscope-module.html">Package&nbsp;bioscope</a> ::
+        <a href="pln_inco.bioscope.util-module.html">Module&nbsp;util</a> ::
+        Class&nbsp;BioscopeCorpusProcessor
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class BioscopeCorpusProcessor</h1><p class="nomargin-top"><span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor">source&nbsp;code</a></span></p>
+<p>M&#233;todos para procesar el corpus original, generando eventualmente 
+  archivos intermedios</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>None</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">working_dir</span>,
+        <span class="summary-sig-arg">bioscope_xml_file</span>)</span><br />
+      Carga las variables necesarias de configuraci&#243;n para procesar los 
+      archivos del corpus genia original y resultados intermedios</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#get_doc_ids" class="summary-sig-name">get_doc_ids</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prefix</span>)</span><br />
+      Devuelve una lista con los identificadores de documentos del corpus</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_doc_ids">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_sentence_ids"></a><span class="summary-sig-name">get_sentence_ids</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">docId</span>)</span><br />
+      Dado un documento, devuelve una lista con los identificadores de 
+      oraciones en un documento del corpus</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_sentence_ids">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="load_parsed_sentences"></a><span class="summary-sig-name">load_parsed_sentences</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">docId</span>)</span><br />
+      Devuelve una lista de &#225;rboles de parsing, correspondientes a las 
+      oraciones del documento Vienen ordenadas como aparecen en el archivo</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.load_parsed_sentences">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_genia_words"></a><span class="summary-sig-name">get_genia_words</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">docId</span>,
+        <span class="summary-sig-arg">sentenceId</span>)</span><br />
+      Devuelve una lista de (word,lemma,pos,chunk,ne) a partir de lo 
+      generado por el tagger de Genia para el documento y oraci&#243;n 
+      correspondiente.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_genia_words">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_levels"></a><span class="summary-sig-name">get_levels</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">docId</span>,
+        <span class="summary-sig-arg">sentenceId</span>,
+        <span class="summary-sig-arg">scope_type</span>)</span><br />
+      Dada una oraci&#243;n, devuelve la cantidad de niveles m&#225;ximo de 
+      anidamiento para los hedges.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_levels">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#get_bioscope_tokens" class="summary-sig-name">get_bioscope_tokens</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">docId</span>,
+        <span class="summary-sig-arg">sentenceId</span>)</span><br />
+      Dada una oraci&#243;n, la obtiene a partir del documento original, y la 
+      tokeniza (utilizando 
+      <code>nltk.tokenize.TreebankWordTokenizer</code>).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_bioscope_tokens">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE VARIABLES ==================== -->
+<a name="section-InstanceVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#att_database" class="summary-name">att_database</a><br />
+      archivo SQLite donde se guarda el corpus.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="att_dir"></a><span class="summary-name">att_dir</span><br />
+      directorio con los archivos de atributos de las oraciones, para 
+      mostrar
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>nltk.corpus.XMLCorpusReader</code></span>
+    </td><td class="summary">
+        <a name="bioscope_files_corpus"></a><span class="summary-name">bioscope_files_corpus</span><br />
+      corpus Bioscope original, separado por documentos
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="bioscope_files_dir"></a><span class="summary-name">bioscope_files_dir</span><br />
+      directorio con los archivos con marcas bioscope, uno por documento
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="crf_corpus_dir"></a><span class="summary-name">crf_corpus_dir</span><br />
+      directorio con el corpus para procesar con crf y sus resultados
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="event_dir"></a><span class="summary-name">event_dir</span><br />
+      directorio con los documentos en el Genia Event para el corpus
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="genia_articles_dir"></a><span class="summary-name">genia_articles_dir</span><br />
+      archivos con el resultado del an&#225;lisis de GENIA, separado por 
+      documentos
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="genia_event_corpus_dir"></a><span class="summary-name">genia_event_corpus_dir</span><br />
+      corpus Genia Event original
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>nltk.corpus.WordListCorpusReader</code></span>
+    </td><td class="summary">
+        <a name="genia_files_corpus"></a><span class="summary-name">genia_files_corpus</span><br />
+      archivos con el resultado del an&#225;lisis de GENIA, separado por 
+      oraciones
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#genia_files_dir" class="summary-name">genia_files_dir</a><br />
+      directorio con los archivos resultante del an&#225;lisis con Genia de los 
+      textos originales.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#genia_temp_file" class="summary-name">genia_temp_file</a><br />
+      archivo temporal para el an&#225;lisis de genia.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html#genia_temp_results_files" class="summary-name">genia_temp_results_files</a><br />
+      resultado del an&#225;lisis con Genia.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>xml.etree.ElementTree</code></span>
+    </td><td class="summary">
+        <a name="original_bioscope_corpus"></a><span class="summary-name">original_bioscope_corpus</span><br />
+      corpus Bioscope original, consistente en un solo archivo
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>nltk.corpus.BracketParseCorpusReader</code></span>
+    </td><td class="summary">
+        <a name="parsed_files_corpus"></a><span class="summary-name">parsed_files_corpus</span><br />
+      archivos con el an&#225;lisis sint&#225;ctico, separado por documentos
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="parsed_files_dir"></a><span class="summary-name">parsed_files_dir</span><br />
+      directorio para el resultado del an&#225;lisis sintactico de las oraciones
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="parser_grammar_file"></a><span class="summary-name">parser_grammar_file</span><br />
+      archivo con la gram&#225;tica para el parser de Stanford
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="training_filename"></a><span class="summary-name">training_filename</span><br />
+      corpus de entrenamiento para CRF/Yamcha
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="txt_dir"></a><span class="summary-name">txt_dir</span><br />
+      directorio con los textos originales, un archivo por documento
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>string</code></span>
+    </td><td class="summary">
+        <a name="working_dir"></a><span class="summary-name">working_dir</span><br />
+      directorio de trabajo
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">working_dir</span>,
+        <span class="sig-arg">bioscope_xml_file</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Carga las variables necesarias de configuraci&#243;n para procesar los 
+  archivos del corpus genia original y resultados intermedios</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>working_dir</code></strong> (<code>string</code>) - directorio de trabajo</li>
+        <li><strong class="pname"><code>bioscope_xml_file</code></strong> (<code>string</code>) - archivo del corpus bioscope</li>
+    </ul></dd>
+    <dt>Returns: <code>None</code></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_doc_ids"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_doc_ids</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">prefix</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_doc_ids">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Devuelve una lista con los identificadores de documentos del 
+  corpus</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>prefix</code></strong> (<code>String</code>) - prefijo que se desea agregar al identificador</li>
+    </ul></dd>
+    <dt>Returns: <code>List</code></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_bioscope_tokens"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_bioscope_tokens</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">docId</span>,
+        <span class="sig-arg">sentenceId</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope.util-pysrc.html#BioscopeCorpusProcessor.get_bioscope_tokens">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Dada una oraci&#243;n, la obtiene a partir del documento original, y la 
+  tokeniza (utilizando <code>nltk.tokenize.TreebankWordTokenizer</code>). 
+  Devuelve una lista de pares propiedad:valor para cada token.</p>
+  <dl class="fields">
+    <dt>Returns: <code>List</code></dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== INSTANCE VARIABLE DETAILS ==================== -->
+<a name="section-InstanceVariableDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Variable Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceVariableDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="att_database"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">att_database</h3>
+  archivo SQLite donde se guarda el corpus. Se llama attributes.db, y est&#225; 
+  en el <code>working_dir</code>
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd><code>string</code></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="genia_files_dir"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">genia_files_dir</h3>
+  directorio con los archivos resultante del an&#225;lisis con Genia de los 
+  textos originales. Uno por cada oraci&#243;n
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd><code>string</code></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="genia_temp_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">genia_temp_file</h3>
+  archivo temporal para el an&#225;lisis de genia. Siempre se llama 
+  'genia_temp.txt' y est&#225; en el directorio de trabajo
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd><code>string</code></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="genia_temp_results_files"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">genia_temp_results_files</h3>
+  resultado del an&#225;lisis con Genia. Siempre se llama 'genia_temp.genia' y 
+  est&#225; en el directorio de trabajo
+  <dl class="fields">
+    <dt>Type:</dt>
+      <dd><code>string</code></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="pln_inco-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Nov 25 21:04:52 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
