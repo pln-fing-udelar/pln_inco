@@ -38,7 +38,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="pln_inco-module.html">Package&nbsp;pln_inco</a> ::
-        Package&nbsp;bioscope
+        Module&nbsp;bioscope
       </span>
     </td>
     <td>
@@ -54,33 +54,8 @@
     </td>
   </tr>
 </table>
-<!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package bioscope</h1><p class="nomargin-top"><span class="codelink"><a href="pln_inco.bioscope-pysrc.html">source&nbsp;code</a></span></p>
-<!-- ==================== SUBMODULES ==================== -->
-<a name="section-Submodules"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Submodules</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-Submodules"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-  <tr><td class="summary">
-  <ul class="nomargin">
-    <li> <strong class="uidlink"><a href="pln_inco.bioscope.scope_rules-module.html">pln_inco.bioscope.scope_rules</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="pln_inco.bioscope.util-module.html">pln_inco.bioscope.util</a></strong>    </li>
-  </ul></td></tr>
-</table>
-
-<br />
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module bioscope</h1><p class="nomargin-top"><span class="codelink"><a href="pln_inco.bioscope-pysrc.html">source&nbsp;code</a></span></p>
 <!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -103,8 +78,8 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="pln_inco.bioscope.BioscopeCorpus-class.html" class="summary-name">BioscopeCorpus</a><br />
-      Corpus Bioscope: contiene toda la informaci&#243;n que se levanta a 
-        memoria del corpus.
+      This class includes every info we collect / generate about the 
+        Bioscope corpus.
     </td>
   </tr>
 <tr>
@@ -112,8 +87,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="pln_inco.bioscope.BioscopeDocument-class.html" class="summary-name">BioscopeDocument</a><br />
-      Documento de Bioscope, incluyendo toda la informaci&#195;&#179;n de parsing y
-        tagging
+      Bioscope document, including tagging and parsing information
     </td>
   </tr>
 <tr>
@@ -121,11 +95,216 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="pln_inco.bioscope.BioscopeSentence-class.html" class="summary-name">BioscopeSentence</a><br />
-      Una oraci&#195;&#179;n del corpus, incluyendo toda la informaci&#195;&#179;n de parsing
-        y tagging.
+      This class contains the information for a single sentence in the 
+        corpus, including tagging and parsing information.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pln_inco.bioscope.BioscopeCorpusProcessor-class.html" class="summary-name">BioscopeCorpusProcessor</a><br />
+      Methods for loading the original corpus from its xml format, and 
+        generate intermediate  analysis files
     </td>
   </tr>
 </table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>String</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope-module.html#bioscope_get_text" class="summary-sig-name">bioscope_get_text</a>(<span class="summary-sig-arg">xml_element</span>)</span><br />
+      Given a bioscope xml tree, extract the text, without the annotation 
+      marks</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#bioscope_get_text">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type"><code>List</code></span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope-module.html#bioscope_retokenize" class="summary-sig-name">bioscope_retokenize</a>(<span class="summary-sig-arg">genia_words</span>,
+        <span class="summary-sig-arg">bioscope_tokens</span>)</span><br />
+      Given a list of words, resulting form the GENIA tagger tokenizer, and
+      another, resulting from text tokenizing using 
+      <code>nltk.tokenize.TreebankWordTokenizer()</code>, retokenizes the 
+      second one, to mache Genia tagging</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#bioscope_retokenize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pln_inco.bioscope-module.html#gen_conll_file_hc" class="summary-sig-name">gen_conll_file_hc</a>(<span class="summary-sig-arg">dbname</span>,
+        <span class="summary-sig-arg">tablename</span>,
+        <span class="summary-sig-arg">sentence_type</span>,
+        <span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">xs</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">predicted_y</span>)</span><br />
+      Given a BIOSCOPE db table, generate the file for training/evaluation 
+      using CRF++ The file is in CoNLL format (one line for each token, 
+      with attributes space separated, and the last one is the target 
+      class).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#gen_conll_file_hc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Function Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-FunctionDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="bioscope_get_text"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">bioscope_get_text</span>(<span class="sig-arg">xml_element</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope-pysrc.html#bioscope_get_text">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a bioscope xml tree, extract the text, without the annotation 
+  marks</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>xml_element</code></strong> (<code>xml.etree.ElementTree</code>) - XML for the Bioscope corpus</li>
+    </ul></dd>
+    <dt>Returns: <code>String</code></dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="bioscope_retokenize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">bioscope_retokenize</span>(<span class="sig-arg">genia_words</span>,
+        <span class="sig-arg">bioscope_tokens</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope-pysrc.html#bioscope_retokenize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a list of words, resulting form the GENIA tagger tokenizer, and 
+  another, resulting from text tokenizing using 
+  <code>nltk.tokenize.TreebankWordTokenizer()</code>, retokenizes the 
+  second one, to mache Genia tagging</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>genia_words</code></strong> (<code>List</code>) - list of words from Genia Tagger tokenization</li>
+        <li><strong class="pname"><code>bioscope_tokens</code></strong> (<code>List</code>) - list of word from the 
+          <code>nltk.tokenize.TreebankWordTokenizer()</code></li>
+    </ul></dd>
+    <dt>Returns: <code>List</code></dt>
+        <dd>bioscope_tokens, retokenizado</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_conll_file_hc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_conll_file_hc</span>(<span class="sig-arg">dbname</span>,
+        <span class="sig-arg">tablename</span>,
+        <span class="sig-arg">sentence_type</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">xs</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">predicted_y</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pln_inco.bioscope-pysrc.html#gen_conll_file_hc">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a BIOSCOPE db table, generate the file for training/evaluation 
+  using CRF++ The file is in CoNLL format (one line for each token, with 
+  attributes space separated, and the last one is the target class). Blank 
+  lines separate sentences</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>dbname</code></strong> (<code>string</code>) - file for the database file</li>
+        <li><strong class="pname"><code>tablename</code></strong> (<code>string</code>) - table name</li>
+        <li><strong class="pname"><code>sentence_type</code></strong> (<code>string</code>) - a string for SENTENCE_TYPE. If ALL, use every tuple</li>
+        <li><strong class="pname"><code>xs</code></strong> (List) - list of attributes to generate. They must match the table's 
+          column name, and do not include the target class</li>
+        <li><strong class="pname"><code>y</code></strong> (List) - Attribute indicating the target class</li>
+        <li><strong class="pname"><code>predicted_y</code></strong> (<code>string</code>) - Learned class (for evaluation)</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
@@ -152,7 +331,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 30 23:58:50 2014
+    Generated by Epydoc 3.0.1 on Fri Jan 16 16:29:13 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

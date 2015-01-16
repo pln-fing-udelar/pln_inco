@@ -9,7 +9,7 @@ def generate(dot,format):
 	""" Given a graphviz specification, returns the dot generated file, in the specifyied format
 	This function assumes that dot is installed and included in the PATH variable
 	Format can be one of: 'jpg', 'png', 'svg'
-	@arg input: a unicode string with the dot specification 
+	@arg dot: a unicode string with the dot specification 
 	@arg format: one of 'jpg', 'png', 'svg'
 	@return a binary file with the appropiate format
 	"""

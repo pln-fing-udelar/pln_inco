@@ -38,7 +38,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="pln_inco-module.html">Package&nbsp;pln_inco</a> ::
-        <a href="pln_inco.bioscope-module.html">Package&nbsp;bioscope</a> ::
+        <a href="pln_inco.bioscope-module.html">Module&nbsp;bioscope</a> ::
         Class&nbsp;BioscopeSentence
       </span>
     </td>
@@ -57,8 +57,8 @@
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class BioscopeSentence</h1><p class="nomargin-top"><span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence">source&nbsp;code</a></span></p>
-<p>Una oraci&#195;&#179;n del corpus, incluyendo toda la informaci&#195;&#179;n de parsing y 
-  tagging. Parte de un <a 
+<p>This class contains the information for a single sentence in the 
+  corpus, including tagging and parsing information. Part of <a 
   href="pln_inco.bioscope.BioscopeDocument-class.html" 
   class="link">bioscope.BioscopeDocument</a></p>
 
@@ -90,11 +90,7 @@
         <span class="summary-sig-arg">sentenceId</span>,
         <span class="summary-sig-arg">sindex</span>,
         <span class="summary-sig-arg">bcp</span>)</span><br />
-      Crea la estructura que va a contener la oraci&#195;&#179;n, NO levanta los 
-      datos (esto se hace en la clase <a 
-      href="pln_inco.bioscope.BioscopeDocument-class.html" 
-      class="link">bioscope.BioscopeDocument</a>, porque se cargan todas 
-      las oraciones de un documento al mismo tiempo).</td>
+      Create the datastructures.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.__init__">source&nbsp;code</a></span>
             
@@ -111,8 +107,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="has_hedging"></a><span class="summary-sig-name">has_hedging</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Devuelve true si la oraci&#195;&#179;n tiene alguna marca de hedging, false en 
-      caso contrario</td>
+      Returns true if the sentence includes a hedge cude</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.has_hedging">source&nbsp;code</a></span>
             
@@ -129,8 +124,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="has_negation"></a><span class="summary-sig-name">has_negation</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Devuelve true si la oraci&#195;&#179;n tiene alguna marca de negaci&#195;&#179;n, false 
-      en caso contrario</td>
+      Returns True if the sentence includes a negation mark</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.has_negation">source&nbsp;code</a></span>
             
@@ -147,8 +141,8 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="get_dot"></a><span class="summary-sig-name">get_dot</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Devuelve un string en formato graphviz que representa el &#195;&#161;rbol de la
-      oraci&#195;&#179;n (incluyendo las marcas de tagging).</td>
+      Return a Graphviz specification of the sentence tree (including 
+      tagging and hedging marks)</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_dot">source&nbsp;code</a></span>
             
@@ -165,7 +159,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="pln_inco.bioscope.BioscopeSentence-class.html#get_basic_attributes" class="summary-sig-name">get_basic_attributes</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Devuelve la lista de tokens de la oraci&#195;&#179;n junto con sus atributos.</td>
+      Return a list of tokens, and its attributes.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_basic_attributes">source&nbsp;code</a></span>
             
@@ -184,9 +178,8 @@
           <td><span class="summary-sig"><a href="pln_inco.bioscope.BioscopeSentence-class.html#get_leaf_grandparent" class="summary-sig-name">get_leaf_grandparent</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">leaf_pos</span>,
         <span class="summary-sig-arg">gp_number</span>)</span><br />
-      Dada una hoja del &#195;&#161;rbol, devuelve &#195;&#169;l arbol de su abuelo y una 
-      especificaci&#195;&#179;n de la posici&#195;&#179;n en el &#195;&#161;rbol original, v&#195;&#173;a un 
-      treepos</td>
+      Given a tree leave, returns its grandparent tree, and a treepos 
+      indicating the position in the original tree</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_leaf_grandparent">source&nbsp;code</a></span>
             
@@ -204,8 +197,8 @@
         <tr>
           <td><span class="summary-sig"><a href="pln_inco.bioscope.BioscopeSentence-class.html#get_node_scope" class="summary-sig-name">get_node_scope</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">treepos</span>)</span><br />
-      Dado un nodo del &#195;&#161;rbol, devuelve las posiciones de la primera y 
-      &#195;&#186;ltima hoja de su alcance</td>
+      Given a tree node, returns the treepos for the first and last leaves 
+      within its scope</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_node_scope">source&nbsp;code</a></span>
             
@@ -223,8 +216,7 @@
         <tr>
           <td><span class="summary-sig"><a name="get_scope_start"></a><span class="summary-sig-name">get_scope_start</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">treepos</span>)</span><br />
-      Dado un &#195;&#161;rbol y un nodo dado por una posici&#195;&#179;n en el &#195;&#161;rbol, 
-      devuelve el comienzo del alcance del nodo</td>
+      Given a tree and a node, returns the left position of the scope</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_scope_start">source&nbsp;code</a></span>
             
@@ -242,8 +234,7 @@
         <tr>
           <td><span class="summary-sig"><a name="get_scope_end"></a><span class="summary-sig-name">get_scope_end</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">treepos</span>)</span><br />
-      Dado un &#195;&#161;rbol y un nodo dado por una posici&#195;&#179;n en el &#195;&#161;rbol, 
-      devuelve el final del alcance del nodo</td>
+      Given a tree and a node, returns the right position of the scope</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_scope_end">source&nbsp;code</a></span>
             
@@ -262,11 +253,9 @@
           <td><span class="summary-sig"><a href="pln_inco.bioscope.BioscopeSentence-class.html#get_node_hedge_scope" class="summary-sig-name">get_node_hedge_scope</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">treepos</span>,
         <span class="summary-sig-arg">hedge_cue_pos</span>,
-        <span class="summary-sig-arg">use_heuristics</span>)</span><br />
-      Dado un nodo del &#195;&#161;rbol, devuelve las posiciones (empezando de 0) de 
-      la primera y &#195;&#186;ltima hoja de su alcance Desde el punto de vista del 
-      hedging (lo que puede hacer que se poden algunas ramas del 
-      constituyente para que ajuste m&#195;&#161;s a los criterios de bioscope.</td>
+        <span class="summary-sig-arg">use_heuristics</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Given a tree node, returns the treepos for the first and last leaves 
+      within its scope.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_node_hedge_scope">source&nbsp;code</a></span>
             
@@ -299,7 +288,7 @@
       <span class="summary-type"><code>nltk.Tree</code></span>
     </td><td class="summary">
         <a name="data"></a><span class="summary-name">data</span><br />
-      &#195;&#161;rbol de an&#195;&#161;lisis sint&#195;&#161;ctico de la oraci&#195;&#179;n.
+      Sentence parsing tree.
     </td>
   </tr>
 <tr>
@@ -307,8 +296,8 @@
       <span class="summary-type"><code>bool</code></span>
     </td><td class="summary">
         <a name="data_loaded"></a><span class="summary-name">data_loaded</span><br />
-      indicador de si ya se carg&#195;&#179; el contenido del documento en la 
-      estructura
+      feature indicating if the information for the sentence has been 
+      correctly loaded
     </td>
   </tr>
 <tr>
@@ -316,7 +305,7 @@
       <span class="summary-type"><code>string</code></span>
     </td><td class="summary">
         <a name="docId"></a><span class="summary-name">docId</span><br />
-      identificador del documento que contiene la oraci&#195;&#179;n
+      document identifier
     </td>
   </tr>
 <tr>
@@ -324,7 +313,7 @@
       <span class="summary-type"><code>string</code></span>
     </td><td class="summary">
         <a name="sentenceId"></a><span class="summary-name">sentenceId</span><br />
-      identificador de la oraci&#195;&#179;n en el corpus
+      sentence identifier
     </td>
   </tr>
 <tr>
@@ -332,7 +321,7 @@
       <span class="summary-type"><code>int</code></span>
     </td><td class="summary">
         <a name="sindex"></a><span class="summary-name">sindex</span><br />
-      &#195;&#173;ndice entero de la oraci&#195;&#179;n dentro del documento
+      Intenger index for the sentence in the document
     </td>
   </tr>
 </table>
@@ -373,17 +362,15 @@
     </td>
   </tr></table>
   
-  <p>Crea la estructura que va a contener la oraci&#195;&#179;n, NO levanta los datos
-  (esto se hace en la clase <a 
-  href="pln_inco.bioscope.BioscopeDocument-class.html" 
-  class="link">bioscope.BioscopeDocument</a>, porque se cargan todas las 
-  oraciones de un documento al mismo tiempo).</p>
+  <p>Create the datastructures. Data is not loaded (this is done within the
+  <a href="pln_inco.bioscope.BioscopeDocument-class.html" 
+  class="link">bioscope.BioscopeDocument</a> class, where all sentences are
+  loaded at the same time).</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>bcp</code></strong> (<a 
-          href="pln_inco.bioscope.util.BioscopeCorpusProcessor-class.html" 
-          class="link">bioscope.util.BioscopeCorpusProcessor</a>)</li>
+        <li><strong class="pname"><code>bcp</code></strong> (<a href="pln_inco.bioscope.BioscopeCorpusProcessor-class.html" 
+          class="link">bioscope.BioscopeCorpusProcessor</a>)</li>
     </ul></dd>
     <dt>Returns: <code>None</code></dt>
   </dl>
@@ -403,8 +390,8 @@
     </td>
   </tr></table>
   
-  <p>Devuelve la lista de tokens de la oraci&#195;&#179;n junto con sus atributos. El
-  primer elemento es la lista de nombres de los atributos</p>
+  <p>Return a list of tokens, and its attributes. The first element is a 
+  list with the attributes names</p>
   <dl class="fields">
     <dt>Returns: <code>List</code></dt>
   </dl>
@@ -426,14 +413,13 @@
     </td>
   </tr></table>
   
-  <p>Dada una hoja del &#195;&#161;rbol, devuelve &#195;&#169;l arbol de su abuelo y una 
-  especificaci&#195;&#179;n de la posici&#195;&#179;n en el &#195;&#161;rbol original, v&#195;&#173;a un 
-  treepos</p>
+  <p>Given a tree leave, returns its grandparent tree, and a treepos 
+  indicating the position in the original tree</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>leaf_pos</code></strong> (<code class="link">int</code>) - N&#195;&#186;mero de hoja</li>
-        <li><strong class="pname"><code>gp_number</code></strong> - n&#195;&#186;mero de grandparent que es. Abuelo=2, Bisabuelo=3, etc.</li>
+        <li><strong class="pname"><code>leaf_pos</code></strong> (<code class="link">int</code>) - leave numer</li>
+        <li><strong class="pname"><code>gp_number</code></strong> - Grandparent number. Grandparent=2, Great-granparent=3, etc.</li>
     </ul></dd>
     <dt>Returns: <code>nltk.Tree</code></dt>
   </dl>
@@ -454,13 +440,12 @@
     </td>
   </tr></table>
   
-  <p>Dado un nodo del &#195;&#161;rbol, devuelve las posiciones de la primera y 
-  &#195;&#186;ltima hoja de su alcance</p>
+  <p>Given a tree node, returns the treepos for the first and last leaves 
+  within its scope</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>treepos</code></strong> (<code>List</code>) - Especificaci&#195;&#179;n de la posici&#195;&#179;n del nodo en el &#195;&#161;rbol de la 
-          oraci&#195;&#179;n</li>
+        <li><strong class="pname"><code>treepos</code></strong> (<code>List</code>) - node position within the sentence tree</li>
     </ul></dd>
     <dt>Returns: <code>sequence</code></dt>
   </dl>
@@ -476,23 +461,28 @@
   <h3 class="epydoc"><span class="sig"><span class="sig-name">get_node_hedge_scope</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">treepos</span>,
         <span class="sig-arg">hedge_cue_pos</span>,
-        <span class="sig-arg">use_heuristics</span>)</span>
+        <span class="sig-arg">use_heuristics</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="pln_inco.bioscope-pysrc.html#BioscopeSentence.get_node_hedge_scope">source&nbsp;code</a></span>&nbsp;
     </td>
   </tr></table>
   
-  <p>Dado un nodo del &#195;&#161;rbol, devuelve las posiciones (empezando de 0) de 
-  la primera y &#195;&#186;ltima hoja de su alcance Desde el punto de vista del 
-  hedging (lo que puede hacer que se poden algunas ramas del constituyente 
-  para que ajuste m&#195;&#161;s a los criterios de bioscope. Tambi&#195;&#169;n utiliza la 
-  posici&#195;&#179;n de la hedge cue en la secuencia para hacer el procesamiento</p>
+  <p>Given a tree node, returns the treepos for the first and last leaves 
+  within its scope. This is a modified version of  <a 
+  href="pln_inco.bioscope.BioscopeSentence-class.html#get_node_scope" 
+  class="link">get_node_scope</a>, including some pruning heuristics that 
+  modify the scope to match Bioscope annotation criteria</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>treepos</code></strong> (<code>List</code>) - Especificaci&#195;&#179;n de la posici&#195;&#179;n del nodo en el &#195;&#161;rbol de la 
-          oraci&#195;&#179;n</li>
+        <li><strong class="pname"><code>treepos</code></strong> (<code>List</code>) - Node position within the tree</li>
+        <li><strong class="pname"><code>use_heuristics</code></strong> - if True it uses heuristics; if False, it just returns the result 
+          of <a 
+          href="pln_inco.bioscope.BioscopeSentence-class.html#get_scope_start"
+          class="link">get_scope_start</a> and <a 
+          href="pln_inco.bioscope.BioscopeSentence-class.html#get_scope_end"
+          class="link">get_scope_end</a></li>
     </ul></dd>
     <dt>Returns: <code>sequence</code></dt>
   </dl>
@@ -525,7 +515,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Nov 30 23:58:50 2014
+    Generated by Epydoc 3.0.1 on Fri Jan 16 16:29:13 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
